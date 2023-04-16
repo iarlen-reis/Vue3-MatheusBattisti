@@ -1,8 +1,8 @@
 <template>
-  <!-- <PrimeiroComponente />
-  <LifeCycle />
-  <Pessoa /> -->
-  <Praticando />
+  <!-- <PrimeiroComponente /> -->
+  <!-- <LifeCycle /> -->
+  <Pessoa />
+  <!-- <Praticando /> -->
 </template>
 
 <script>

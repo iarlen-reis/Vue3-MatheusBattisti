@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Picture />
     <p v-if="isWorking">Estou trabalhando no momento.</p>
     <p v-else>Estou em busca de novas oportunidades.</p>
     <p>Utilizo as seguintes tecnologias:</p>
@@ -8,23 +9,27 @@
       <li v-show="showPHP">PHP</li>
       <li>Python</li>
     </ul>
-    <ul>
-      <li v-for="number in numbers" :key="number">
-        Eu sou o número: {{ number }}
-      </li>
-    </ul>
+    <p>
+      Para acessar meu portfolio
+      <a v-bind:href="menu_link" target="_blank">clique aqui</a>
+    </p>
   </div>
 </template>
 
 <script lang="js">
+  import Picture from './Picture.vue';
+
 export default {
   name: "Descricao",
+  components: {
+    Picture
+  },
 
   data() {
     return {
       isWorking: false,
       showPHP: true,
-      numbers: [1, 2, 3, 4, 5]
+      menu_link: 'https://iarlenreis.com.br'
     }
   },
 };
