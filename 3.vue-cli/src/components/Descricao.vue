@@ -9,6 +9,12 @@
       <li v-show="showPHP">PHP</li>
       <li>Python</li>
     </ul>
+    <div>
+      <button @click="showEmail">
+        {{ mostrarEmail ? "Esconder E-mail" : "Mostrar-Email" }}
+      </button>
+    </div>
+    <p v-show="mostrarEmail">Meu E-mail é: iarlensr@gmail.com</p>
     <p>
       Para acessar meu portfolio
       <a v-bind:href="menu_link" target="_blank">clique aqui</a>
@@ -29,8 +35,14 @@ export default {
     return {
       isWorking: false,
       showPHP: true,
+      mostrarEmail: false,
       menu_link: 'https://iarlenreis.com.br'
     }
   },
+  methods: {
+    showEmail() {
+      this.mostrarEmail = !this.mostrarEmail
+    }
+  }
 };
 </script>
