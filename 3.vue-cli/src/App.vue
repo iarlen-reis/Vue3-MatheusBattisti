@@ -1,6 +1,6 @@
 <template>
-  <PrimeiroComponente />
-  <LifeCycle />
+  <!-- <PrimeiroComponente />
+  <LifeCycle /> -->
   <Pessoa />
 </template>
 
